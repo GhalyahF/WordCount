@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  width:auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+  <body>
+
+    <h1> Text Analysis </h1>
+    <p>{{fulltext}}</p>
+    <h2> Word count: {{count}} words</h2>
+    <h2> Word Frequency </h2>
+    <table>
+      <tr>
+        <th>Word</th>
+        <th>Frequency</th>
+      </tr>
+      {% for word, total in sortedwords %}
+      <tr>
+        <td>{{word}}</td>
+        <td>{{count}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+  </body>
+</html>
